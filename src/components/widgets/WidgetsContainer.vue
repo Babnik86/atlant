@@ -145,15 +145,16 @@ export default {
         } else {
           currentTop += w.height + this.gridY;
           currentLeft = 0;
-          w.top = currentTop < 0 ? 0 : currentTop;
-          w.left = currentLeft < 0 ? 0 : currentLeft;
+          w.top = currentTop <= 0 ? 0 : currentTop;
+          w.left = 0;
+          currentLeft = w.width + this.gridX;
         }
         w.active = false;
         return w;
       });
-      setTimeout(() => {
+      this.$nextTick(() => {
         this.loading = false;
-      }, 0);
+      });
       return localWidgets;
     },
     sortCurrentWidgets(widgets) {

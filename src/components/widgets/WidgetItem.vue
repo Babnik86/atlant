@@ -16,7 +16,9 @@
     >
       <div class="content-container-header">
         <b>{{ params.content.title }}</b>
-        <button @click.prevent.stop="removeWidget">&#128465;</button>
+        <button @click="widgetRemove()">&#128465;</button>
+      </div>
+      <div>
       </div>
     </VueDragResize>
   </div>
@@ -48,7 +50,8 @@ export default {
     widgetClicked() {
       this.$emit('activated', this.params.id);
     },
-    removeWidget() {
+    widgetRemove() {
+      console.log('widgetRemove');
       this.$emit('remove', this.params.id);
     },
     widgetResized(newRect) {

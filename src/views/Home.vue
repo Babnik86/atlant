@@ -9,7 +9,7 @@
 import WidgetsContainer from '@/components/widgets/WidgetsContainer.vue';
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: { WidgetsContainer },
   data() {
     return {
