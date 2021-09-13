@@ -20,6 +20,14 @@
   overflow: hidden;
 }
 
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 #nav {
   padding: 30px;
 }
